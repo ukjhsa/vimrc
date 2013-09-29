@@ -14,11 +14,13 @@ HOW TO INSTALL
 
         $ ./install-vimrc.sh
 
-3. (Optional, if you want Command-T) Compile the Command-T plugin
+3. Install YouCompleteMe
 
-        $ cd .vim/bundle/command-t/ruby/command-t
-        $ ruby extconf.rb
-        $ make
+        * see [YouCompleteMe](https://github.com/Valloric/YouCompleteMe)
+        1. Install CMake
+        2.
+        $ cd ~/.vim/bundle/YouCompleteMe
+        $ ./install.sh --clang-complete
 
 If you have some problem when updating submodule, such as
 
