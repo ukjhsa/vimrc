@@ -16,9 +16,10 @@ HOW TO INSTALL
 
 3. Install YouCompleteMe
 
-        * see [YouCompleteMe](https://github.com/Valloric/YouCompleteMe)
-        1. Install CMake
-        2.
+    see [YouCompleteMe](https://github.com/Valloric/YouCompleteMe)
+    
+    Install CMake
+    
         $ cd ~/.vim/bundle/YouCompleteMe
         $ ./install.sh --clang-complete
 
