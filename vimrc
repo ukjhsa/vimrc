@@ -68,6 +68,10 @@ Bundle 'git://git.wincent.com/command-t.git'
 Bundle 'YouCompleteMe'
 " syntastic
 Bundle 'syntastic'
+" a.vim
+Bundle 'a.vim'
+" nerdtree
+Bundle 'nerdtree'
 
 filetype plugin indent on     " required!
 "
@@ -83,5 +87,8 @@ filetype plugin indent on     " required!
 " ===== Vundle setting end =====
 
 let g:ycm_global_ycm_extra_conf = '~/.vim/ycm_extra_conf.py'
-let g:ycm_confirm_extra_conf = 1
+let g:ycm_confirm_extra_conf = 0
+
+autocmd vimenter * if !argc() | NERDTree | endif
+autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
 
