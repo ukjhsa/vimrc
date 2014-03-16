@@ -94,3 +94,30 @@ autocmd vimenter * NERDTree
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
 let NERDTreeShowHidden=1
 
+
+if filereadable("SConstruct")
+    set makeprg=scons
+endif
+
+function! HasError(qflist)
+    for i in a:qflist
+        if i.valid == 1
+            return 1
+        endif
+    endfor
+    return 0
+endfunction
+
+function! BuildAndRun()
+    make
+    if HasError( getqflist() )
+        cl
+    else
+        !./a.out
+    endif
+endfunction
+
+map <F5> :call BuildAndRun()<CR>
+map <C-N> :cn<CR>
+map <C-P> :cp<CR>
+
