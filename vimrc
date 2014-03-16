@@ -86,9 +86,11 @@ filetype plugin indent on     " required!
 
 " ===== Vundle setting end =====
 
-let g:ycm_global_ycm_extra_conf = '~/.vim/ycm_extra_conf.py'
-let g:ycm_confirm_extra_conf = 0
+let g:ycm_global_ycm_extra_conf = '~/.vim/.ycm_extra_conf.py'
+"let g:ycm_confirm_extra_conf = 0
+let g:ycm_complete_in_comments = 1
 
-autocmd vimenter * if !argc() | NERDTree | endif
+autocmd vimenter * NERDTree
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
+let NERDTreeShowHidden=1
 

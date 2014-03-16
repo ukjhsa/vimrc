@@ -8,7 +8,7 @@ HOW TO INSTALL
 
         $ git clone https://github.com/ukjhsa/vimrc ~/.vim
         $ cd ~/.vim
-        $ git submodule update --init
+        $ git submodule update --init --recursive
 
 2. Install ~/.vimrc
 
